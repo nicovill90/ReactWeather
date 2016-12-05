@@ -1,6 +1,6 @@
 var React = require('react');
 
-var WheatherForm = React.createClass({
+var WeatherForm = React.createClass({
   onFormSubmit: function (e) {
     e.preventDefault();
 
@@ -11,15 +11,16 @@ var WheatherForm = React.createClass({
       this.props.onSearch(location);
     }
   },
-
   render: function () {
     return (
-      <form onSubmit={this.onFormSubmit}>
-          <input type="text" ref="location"/>
-          <button>Submit</button>
-      </form>
-    )
+        <div>
+          <form onSubmit={this.onFormSubmit}>
+            <input type="text" ref="location"/>
+            <button>Get Weather</button>
+          </form>
+        </div>
+    );
   }
 });
 
-module.exports = WheatherForm;
+module.exports = WeatherForm;
